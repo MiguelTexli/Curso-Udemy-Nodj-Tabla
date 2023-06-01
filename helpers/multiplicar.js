@@ -56,14 +56,6 @@ const creaArchivo = async( base, listar = false, hasta = 10) => {
     
     try{
 
-        if (listar ){
-            console.log('======================'.green);
-            // console.log(`     Tabla del ${ base }    `)
-            console.log('     Tabla del '.green, colors.blue( base ) );
-            console.log('======================'.green);
-        }
-        
-
         let salida = ''; 
         let consola = '';
 
@@ -71,8 +63,13 @@ const creaArchivo = async( base, listar = false, hasta = 10) => {
             salida  += ` ${ base } x ${ i } = ${ base * i }\n`;
             consola += ` ${ base } ${ 'x'.red } ${ i } ${ '='.blue } ${ base * i }\n`;
         }
-        
-        if ( listar ){
+
+        if (listar ){
+            console.log('======================'.green);
+            // console.log(`     Tabla del ${ base }    `)
+            console.log('     Tabla del '.green, colors.blue( base ) );
+            console.log('======================'.green);
+            
             console.log( consola );
         }
         
